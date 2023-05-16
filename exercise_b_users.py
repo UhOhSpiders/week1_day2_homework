@@ -53,6 +53,43 @@ users = {
     ]
   }
 }
+#1
+jonathans_twitter_handle = users["Jonathan"]["twitter"]
+print(jonathans_twitter_handle)
+
+#2
+eriks_home_town = users["Erik"]["home_town"]
+print(eriks_home_town)
+
+#3
+eriks_lottery_numbers = users["Erik"]["lottery_numbers"]
+print(eriks_lottery_numbers)
+
+#4
+avrils_pet_species = users["Avril"]["pets"][0]["species"]
+print(avrils_pet_species)
+
+#5
+eriks_lottery_numbers = users["Erik"]["lottery_numbers"]
+print(min(eriks_lottery_numbers))
+
+#6
+avrils_lottery_numbers = users["Avril"]["lottery_numbers"]
+evensList = [x for x in avrils_lottery_numbers if x % 2 == 0]
+print(evensList)
+
+#7
+eriks_lottery_numbers = users["Erik"]["lottery_numbers"]
+eriks_lottery_numbers.append(7)
+print(eriks_lottery_numbers)
+
+#8
+users["Erik"]["home_town"] = "Edinburgh"
+print(users["Erik"]["home_town"])
+
+
+
+
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 # 2. Get Erik's hometown
