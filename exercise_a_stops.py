@@ -23,14 +23,16 @@ print(stops.index("Linlithgow"))
 stops.remove("Livingston")
 #6
 stops.pop(2)
+stops.pop(stops.index("Cumbernauld")) #get index of cumbernauld. some people aren't into this for readability reasons
 #7
 print(len(stops))
 #8
 print(sorted(stops))
+stops.sort() #you could add reverse=True inside the brackets
 
 #9
 print(stops)
-stops.reverse()
+stops.reverse() 
 print(stops)
 
 #10

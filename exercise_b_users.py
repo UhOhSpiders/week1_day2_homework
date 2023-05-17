@@ -56,6 +56,8 @@ users = {
 #1
 jonathans_twitter_handle = users["Jonathan"]["twitter"]
 print(jonathans_twitter_handle)
+#NEATER AND QUICKER WAY
+print(users["Jonathan"]["twitter"])
 
 #2
 eriks_home_town = users["Erik"]["home_town"]
@@ -73,10 +75,21 @@ print(avrils_pet_species)
 eriks_lottery_numbers = users["Erik"]["lottery_numbers"]
 print(min(eriks_lottery_numbers))
 
+eriks_numbers = users ["Erik"]["lottery_numbers"]
+eriks_numbers.sort() #the sort function won't return us a list we can work imediately work with but it will sort it first
+eriks_numbers[0] #we can then access the list on a seperate line
+
 #6
 avrils_lottery_numbers = users["Avril"]["lottery_numbers"]
 evensList = [x for x in avrils_lottery_numbers if x % 2 == 0]
 print(evensList)
+
+avrils_lottery_numbers = users["Avril"]["lottery_numbers"]
+even_numbers = []
+for number in avrils_lottery_numbers:
+  if number % 2 == 0: #modulus gives you the remainder of an int after division
+    even_numbers.append(number) #if there is no remainder then the number is even and we then append it to the list
+
 
 #7
 eriks_lottery_numbers = users["Erik"]["lottery_numbers"]
@@ -87,9 +100,19 @@ print(eriks_lottery_numbers)
 users["Erik"]["home_town"] = "Edinburgh"
 print(users["Erik"]["home_town"])
 
+#9
+#THINK ABOUT THE DATA TYPE, HOW TO ACCESS IT & AND HOW TO CREATE IT
+new_pet = {"name":"fluffy","species":"dog"} #create a new dicitonary (this is the data type for pets) and assign it to a variable
+users["Erik"]["pets"].append(new_pet) #use the append fuction to add this dictionary to the list of dictionaries
 
-
-
+#10
+new_person = {
+   "twitter": "allym"
+   #etc
+}
+# VVVVVVVVVVV to add something to a dictionary you need to create a new key
+users["Ally"] = new_person 
+#we then assign the keys value as the variable we created on line 109
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 # 2. Get Erik's hometown
