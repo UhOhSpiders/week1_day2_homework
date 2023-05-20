@@ -1,15 +1,24 @@
 # For the following list of numbers:
 
-numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
+numbers = [1, 6, 2, 7, 7, 1, 6, 13, 99, 7]
 
 # 1. Print out a list of the even integers:
-
+even_numbers = []
+for number in numbers:
+    if number % 2 == 0:
+        even_numbers.append(number)
+print(even_numbers)
 
 # 2. Print the difference between the largest and smallest value:
-
+print((max(numbers))-(min(numbers)))
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
-
+number_tracker = 0
+for number in numbers:
+    if number == number_tracker:
+        print(True)
+    else:
+        number_tracker = number
 
 # 4. Print the sum of the numbers, 
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
